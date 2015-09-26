@@ -8,23 +8,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col col-xs-12">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h2 class="game-title">Ribbit</h2>
-            </div>
-            <div class="panel-content">
-              <h3>
-                Score: <span id="score">0</span> Lives: <span id="lives">3</span>
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="game-screen row">
-        <div class="col col-xs-12">
           <canvas id="game-canvas" class=""></canvas>
           <div class="welcome-message hidden panel panel-primary">
             <div class="panel-heading">
@@ -38,7 +22,6 @@
               </p>
               <h2><div class="btn btn-default start-button">Play</div></h2>
             </div>
-          </div>
 
           <div class="game-over-message hidden panel panel-danger">
             <div class="panel-heading">Game over!</div>
@@ -54,18 +37,29 @@
     </div>
     <script src="lib/jquery-2.1.1.js"></script>
     <script src="vendor/keymaster.js"></script>
+    <script src="lib/game.js"></script>
+    <script src="lib/view.js"></script>
+    <!-- <script src="lib/floating_object.js"></script> -->
+    <!-- <script src="lib/vehicle.js"></script> -->
+    <script src="lib/frog.js"></script>
+
     <script type="application/javascript">
-      $("start-button").click(function () {
+      // $(".start-button").click(function () {
         // remove reveal classes and reveal game
         // turn this into a js file
-        var canvasEl = document.getElemetsById("game-canvas");
-        canvasEl.width = Ribbit.Game.DIM_X;
-        canvasEl.height = Ribbit.Game.DIM_Y;
+      $(".welcome-message, .game-over-message, .game-won-message").removeClass("revealed").addClass("hidden");
+      $("#game-canvas").removeClass("hidden").addClass("revealed");
+      var canvasEl = document.getElementById("game-canvas");
+      canvasEl.width = window.innerWidth;
+      canvasEl.height = window.innerHeight;
 
-        var ctx = canvasEl.getContext("2d");
-        var game = new Ribbit.Game();
-        new Ribbit.View(game, ctx).start();
-      })
+      var ctx = canvasEl.getContext("2d");
+      var game = new Ribbit.Game({
+        height: canvasEl.height,
+        width: canvasEl.width,
+      });
+      new Ribbit.View(game, ctx).start();
+      // })
     </script>
   </body>
 </html>
