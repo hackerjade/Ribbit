@@ -25,8 +25,8 @@
 
       <div class="game-screen row">
         <div class="col col-xs-12">
-          <canvas id="game-canvas" class="hidden"></canvas>
-          <div class="welcome-message revealed panel panel-primary">
+          <canvas id="game-canvas" class=""></canvas>
+          <div class="welcome-message hidden panel panel-primary">
             <div class="panel-heading">
               <h1>Ribbit</h1>
             </div>
@@ -52,5 +52,20 @@
          </div>
       </div>
     </div>
+    <script src="lib/jquery-2.1.1.js"></script>
+    <script src="vendor/keymaster.js"></script>
+    <script type="application/javascript">
+      $("start-button").click(function () {
+        // remove reveal classes and reveal game
+        // turn this into a js file
+        var canvasEl = document.getElemetsById("game-canvas");
+        canvasEl.width = Ribbit.Game.DIM_X;
+        canvasEl.height = Ribbit.Game.DIM_Y;
+
+        var ctx = canvasEl.getContext("2d");
+        var game = new Ribbit.Game();
+        new Ribbit.View(game, ctx).start();
+      })
+    </script>
   </body>
 </html>
