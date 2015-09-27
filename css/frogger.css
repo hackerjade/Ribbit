@@ -1,4 +1,4 @@
-div.welcome {
+div.welcome, div.game-over, div.won {
   position: absolute;
   top: 160px;
   left: 262px;
@@ -11,11 +11,24 @@ p {
   font-size: 1.25em;
 }
 
+h1 {
+  font-size: 4em;
+}
+
+img {
+  width: 365px;
+}
+
+div.game-over {
+  color: red;
+}
+
 .btn.btn-default.start-button {
   color: inherit;
   background: none;
   border: none;
   font-size: larger;
+  color: rgb(0, 216, 0);
 }
 
 div.btn.btn-default.start-button:hover {
