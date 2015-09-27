@@ -7,7 +7,7 @@ A JavaScript browser game inspired by the classic arcade game, Frogger. Graphics
 * Guide Froggy through a perilous journey to bring him safely
 home. Play [here][game-link]!
 * Use the arrow keys ← ↑ → ↓ to avoid getting splat or drowning.
-* Avoid traffic and cross the river by jumping on logs or turtles.
+* Avoid traffic and cross the river by jumping on logs!
 
 [game-link]: jademcpherson.com/ribbit
 

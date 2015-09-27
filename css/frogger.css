@@ -1,10 +1,14 @@
 div.welcome {
   position: absolute;
-  top: 223px;
+  top: 160px;
   left: 262px;
   width: 630px;
   text-align: center;
   color: rgb(0, 216, 0);
+}
+
+p {
+  font-size: 1.25em;
 }
 
 .btn.btn-default.start-button {
