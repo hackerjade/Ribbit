@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 /*!
  * bootswatch v3.3.5
  * Homepage: http://bootswatch.com
@@ -13,7 +13,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -113,7 +113,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Press Start 2P', monospace, monospace;
   font-size: 1em;
 }
 button,
@@ -268,7 +268,7 @@ th {
   }
 }
 @font-face {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
@@ -276,7 +276,7 @@ th {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P'
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -1086,7 +1086,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   font-size: 15px;
   line-height: 1.42857143;
   color: #333333;
@@ -1188,7 +1188,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   font-weight: 300;
   line-height: 1.1;
   color: inherit;
@@ -1536,7 +1536,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
 }
 code {
   padding: 2px 4px;
@@ -6041,7 +6041,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6159,7 +6159,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6426,7 +6426,7 @@ button.close {
   width: 20px;
   height: 20px;
   line-height: 1;
-  font-family: serif;
+  font-family: 'Press Start 2P';
 }
 .carousel-control .icon-prev:before {
   content: '\2039';
