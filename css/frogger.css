@@ -1,4 +1,4 @@
-div.welcome, div.game-over, div.won {
+div.welcome, div.game-over, div.game-won {
   position: absolute;
   top: 160px;
   left: 262px;

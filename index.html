@@ -26,13 +26,13 @@
             <h2><div class="btn btn-default start-button">Play</div></h2>
           </div>
 
-          <div class="game-over reveal">
+          <div class="game-over hidden">
             <h1>Game over!</h1>
             <img src="vendor/frogger_skull.png"></script>
             <h4><div class="btn btn-default start-button"> Play Again</div></h4>
          </div>
 
-          <div class="game-won hidden">
+          <div class="game-won reveal">
             <h1>You won!</h1>
             <h4><div class="btn btn-default start-button">Play Again</div></h4>
          </div>
@@ -59,7 +59,7 @@
          x: canvasEl.width,
          y: canvasEl.height
       });
-      
+
       var game = new Ribbit.Game(), view = new Ribbit.View(game, ctx);
       view.greeting(welcome);
 
