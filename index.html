@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/frogger.css">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <title>Ribbit</title>
     <link rel="icon" type="image/ico" href="images/Frog_Makes_It_Home_icon.ico"/>
   </head>
@@ -10,34 +12,35 @@
     <div class="container-fluid">
       <div class="game-screen row">
           <canvas id="game-canvas" class=""></canvas>
-          <div class="welcome-message hidden panel panel-primary">
-            <div class="panel-heading">
-              <h1>Ribbit</h1>
-            </div>
-            <div class="panel-content">
-              <p>
-                Guide Froggy through a perilous journey to bring him safely
-                home.  Use the arrow keys ← ↑ → ↓ to avoid getting splat
-                by traffic.  Cross the river by jumping on logs or turtles.
-              </p>
-              <h2><div class="btn btn-default start-button">Play</div></h2>
-            </div>
+          <div class="welcome reveal">
+            <h1>Ribbit</h1>
+            <br>
+            <br>
+            <p>
+              Guide Froggy through a perilous journey to bring him safely
+              home.  Use the arrow keys ← ↑ → ↓ to avoid getting splat
+              by traffic.  Cross the river by jumping on logs or turtles.
+            </p>
+            <br>
+            <br>
+            <h2><div class="btn btn-default start-button">Play</div></h2>
+          </div>
 
-          <div class="game-over-message hidden panel panel-danger">
-            <div class="panel-heading">Game over!</div>
+          <div class="game-over hidden panel panel-danger">
+            <h1>Game over!</h1>
             <h2><div class="btn btn-default start-button"> Play Again</div></h2>
-           </div>
+         </div>
 
-          <div class="game-won-message hidden">
-            <div class="panel-heading">You won!</div>
-             <h2><div class="btn btn-default start-button">Play Again</div></h2>
-           </div>
+          <div class="game-won hidden">
+            <h1>You won!</h1>
+            <h2><div class="btn btn-default start-button">Play Again</div></h2>
          </div>
       </div>
     </div>
     <script src="lib/jquery-2.1.1.js"></script>
     <script src="vendor/keymaster.js"></script>
     <script src="lib/util.js"></script>
+    <script src="lib/welcome.js"></script>
     <script src="lib/game.js"></script>
     <script src="lib/view.js"></script>
     <script src="lib/moving_object.js"></script>
@@ -46,22 +49,23 @@
     <script src="lib/frog.js"></script>
 
     <script type="application/javascript">
-      // $(".start-button").click(function () {
-        // remove reveal classes and reveal game
-        // turn this into a js file
-      $(".welcome-message, .game-over-message, .game-won-message").removeClass("revealed").addClass("hidden");
-      $("#game-canvas").removeClass("hidden").addClass("revealed");
       var canvasEl = document.getElementById("game-canvas");
-      canvasEl.width = 1155;
-      canvasEl.height = 800;
+      canvasEl.width = Ribbit.Game.WIDTH;
+      canvasEl.height = Ribbit.Game.HEIGHT;
 
       var ctx = canvasEl.getContext("2d");
-      var game = new Ribbit.Game({
-        y: canvasEl.height,
-        x: canvasEl.width,
-      });
-      new Ribbit.View(game, ctx).start();
-      // })
+      var welcome = new Ribbit.Welcome({ x: canvasEl.width, y: canvasEl.height });
+      var game = new Ribbit.Game({ y: canvasEl.height, x: canvasEl.width });
+      var view = new Ribbit.View(game, ctx);
+      view.greeting(welcome);
+
+      $(".start-button").click(function () {
+        // remove reveal classes and reveal game
+        // turn this into a js file
+        var hidden_messages = ".welcome, .game-over, .game-won, .welcome-canvas"
+        $(hidden_messages).removeClass("revealed").addClass("hidden");
+        view.start(game);
+      })
     </script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+div.welcome {
+  position: absolute;
+  top: 223px;
+  left: 262px;
+  width: 630px;
+  text-align: center;
+  color: rgb(0, 216, 0);
+}
+
+.btn.btn-default.start-button {
+  color: inherit;
+  background: none;
+  border: none;
+  font-size: larger;
+}
+
+div.btn.btn-default.start-button:hover {
+  color: rgb(172, 0, 211);
+}
