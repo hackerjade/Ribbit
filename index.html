@@ -9,35 +9,36 @@
     <link rel="icon" type="image/ico" href="images/Frog_Makes_It_Home_icon.ico"/>
   </head>
   <body>
-    <div class="container-fluid">
+    <main class="container-fluid">
       <div class="game-screen row">
           <canvas id="game-canvas" class=""></canvas>
-          <div class="welcome hidden">
+          <section class="welcome hidden">
             <h1>Ribbit</h1>
-            <br>
-            <br>
             <p>
               Guide Froggy through a perilous journey to bring him safely
               home.  Use the arrow keys ← ↑ → ↓ to avoid getting splat
               by traffic.  Cross the river by jumping on logs!
             </p>
-            <br>
-            <br>
-            <h2><div class="btn btn-default start-button">Play</div></h2>
-          </div>
+            <h2><nav class="btn btn-default start-button">Play</nav></h2>
+          </section>
 
-          <div class="game-over hidden">
+          <section class="game-over hidden">
             <h1>Game over!</h1>
             <img src="vendor/frogger_skull.png"></script>
-            <h4><div class="btn btn-default start-button"> Play Again</div></h4>
-         </div>
+            <h4><nav class="btn btn-default start-button"> Play Again</nav></h4>
+         </section>
 
-          <div class="game-won hidden">
+          <section class="game-won hidden">
             <h1>You won!</h1>
-            <h4><div class="btn btn-default start-button">Play Again</div></h4>
-         </div>
+            <h4><nav class="btn btn-default start-button">Play Again</nav></h4>
+         </section>
+
+         <section class="score-bar reveal">
+           <span class="lives">Lives:</span>
+           <span class="score">Score:<div id="score">0</div></span>
+         </section>
       </div>
-    </div>
+    </main>
     <script src="lib/jquery-2.1.1.js"></script>
     <script src="vendor/keymaster.js"></script>
     <script src="lib/util.js"></script>

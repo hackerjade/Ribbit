@@ -1,10 +1,33 @@
-div.welcome, div.game-over, div.game-won {
+section.welcome, section.game-over, section.game-won {
   position: absolute;
   top: 160px;
   left: 262px;
   width: 630px;
   text-align: center;
   color: rgb(0, 216, 0);
+}
+
+section.score-bar {
+  position: absolute;
+  bottom: 3px;
+  font-size: 40px;
+  width: 1155px;
+  text-align: center;
+  color: rgb(0, 216, 0);
+}
+
+span.lives {
+  float: left;
+  margin-left: 10px;
+}
+
+span.score {
+  float: right;
+  margin-right: 10px;
+}
+
+div#score {
+  display: inline;
 }
 
 p {
@@ -19,7 +42,7 @@ img {
   width: 365px;
 }
 
-div.game-over {
+section.game-over {
   color: red;
 }
 
@@ -31,6 +54,6 @@ div.game-over {
   color: rgb(0, 216, 0);
 }
 
-div.btn.btn-default.start-button:hover {
+nav.btn.btn-default.start-button:hover {
   color: rgb(172, 0, 211);
 }
