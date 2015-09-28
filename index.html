@@ -12,7 +12,7 @@
     <div class="container-fluid">
       <div class="game-screen row">
           <canvas id="game-canvas" class=""></canvas>
-          <div class="welcome reveal">
+          <div class="welcome hidden">
             <h1>Ribbit</h1>
             <br>
             <br>
@@ -48,10 +48,6 @@
     <script src="lib/floating_object.js"></script>
     <script src="lib/vehicle.js"></script>
     <script src="lib/frog.js"></script>
-    <script type="text/javascript">
-    WebFontConfig = {
-       google: { families: [ 'Press+Start+2P::latin' ] } };
-    </script>
     <script type="application/javascript">
       var canvasEl = document.getElementById("game-canvas");
       canvasEl.width = Ribbit.Game.WIDTH;
@@ -66,12 +62,12 @@
       var game = new Ribbit.Game(), view = new Ribbit.View(game, ctx);
       view.greeting(welcome);
 
-      $(".start-button").click(function () {
+      // $(".start-button").click(function () {
         // turn this into a js file
         var hidden_messages = ".welcome, .game-over, .game-won, .welcome-canvas"
         $(hidden_messages).removeClass("revealed").addClass("hidden");
         view.start(game);
-      })
+      // })
     </script>
   </body>
 </html>
