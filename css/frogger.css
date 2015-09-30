@@ -36,12 +36,12 @@ section.score-bar {
 
 span.lives {
   float: left;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 span.score {
   float: right;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 div#score {
