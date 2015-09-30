@@ -27,7 +27,7 @@ section.welcome, section.game-over, section.game-won {
 
 section.score-bar {
   position: absolute;
-  bottom: 3px;
+  top: 747px;
   font-size: 40px;
   width: 1155px;
   text-align: center;
