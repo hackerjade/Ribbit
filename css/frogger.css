@@ -34,6 +34,16 @@ section.score-bar {
   color: rgb(0, 216, 0);
 }
 
+#paused {
+  position: absolute;
+  top: 281px;
+  left: 262px;
+  width: 630px;
+  font-size: 99px;
+  text-align: center;
+  color: rgb(0, 216, 0);
+}
+
 span.lives {
   float: left;
   margin-left: 15px;
