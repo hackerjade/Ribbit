@@ -18,8 +18,8 @@ span, article, footer, time, small {
 
 section.welcome, section.game-over, section.game-won {
   position: absolute;
-  top: 160px;
-  left: 262px;
+  top: 100px;
+  left: 85px;
   width: 630px;
   text-align: center;
   color: rgb(0, 216, 0);
@@ -27,19 +27,9 @@ section.welcome, section.game-over, section.game-won {
 
 section.score-bar {
   position: absolute;
-  top: 747px;
-  font-size: 40px;
-  width: 1155px;
-  text-align: center;
-  color: rgb(0, 216, 0);
-}
-
-#paused {
-  position: absolute;
-  top: 281px;
-  left: 262px;
-  width: 630px;
-  font-size: 99px;
+  top: 503px;
+  font-size: 24px;
+  width: 770px;
   text-align: center;
   color: rgb(0, 216, 0);
 }
@@ -59,15 +49,15 @@ div#score {
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
 img {
-  width: 365px;
+  width: 185px;
 }
 
 section.game-over {
@@ -75,7 +65,7 @@ section.game-over {
 }
 
 .btn.btn-default.start-button {
-  color: inherit;
+  margin-top: 55px;
   background: none;
   border: none;
   font-size: larger;
